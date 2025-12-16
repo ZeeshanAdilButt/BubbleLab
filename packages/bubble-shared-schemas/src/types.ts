@@ -30,6 +30,7 @@ export enum CredentialType {
   S3_CRED = 'S3_CRED',
   // Scraping Credentials
   APIFY_CRED = 'APIFY_CRED',
+  OLOSTEP_API_KEY = 'OLOSTEP_API_KEY',
 
   // Voice Credentials
   ELEVENLABS_API_KEY = 'ELEVENLABS_API_KEY',
@@ -231,4 +232,5 @@ export type BubbleName =
   | 'clerk'
   | 'granola'
   | 'memberful'
-  | 'luma';
+  | 'luma'
+  | 'olostep';

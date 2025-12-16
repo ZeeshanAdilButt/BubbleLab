@@ -329,6 +329,13 @@ export const CREDENTIAL_TYPE_CONFIG: Record<CredentialType, CredentialConfig> =
       namePlaceholder: 'My InsForge API Key',
       credentialConfigurations: {},
     },
+    [CredentialType.OLOSTEP_API_KEY]: {
+      label: 'Olostep',
+      description: 'API key for Olostep web scraping and AI content extraction',
+      placeholder: 'ols_...',
+      namePlaceholder: 'My Olostep API Key',
+      credentialConfigurations: {},
+    },
     [CredentialType.CRUSTDATA_API_KEY]: {
       label: 'Crustdata API Key',
       description: 'API key for your Crustdata backend',
@@ -804,6 +811,7 @@ export const CREDENTIAL_ENV_MAP: Record<CredentialType, string> = {
   [CredentialType.CLERK_API_KEY]: '', // User-provided Secret Key, no env var
   [CredentialType.GRANOLA_API_KEY]: 'GRANOLA_API_KEY',
   [CredentialType.MEMBERFUL_CRED]: '', // Multi-field credential (subdomain + apiKey), no single env var
+  [CredentialType.OLOSTEP_API_KEY]: 'OLOSTEP_API_KEY',
   [CredentialType.CREDENTIAL_WILDCARD]: '', // Wildcard marker, not a real credential
 };
 
@@ -2757,6 +2765,7 @@ export const BUBBLE_CREDENTIAL_OPTIONS: Record<
   granola: [CredentialType.GRANOLA_API_KEY],
   memberful: [CredentialType.MEMBERFUL_CRED],
   luma: [],
+  olostep: [CredentialType.OLOSTEP_API_KEY],
 };
 
 export interface CredentialSiblingEntry {
